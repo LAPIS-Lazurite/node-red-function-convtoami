@@ -1,0 +1,79 @@
+<!-- 
+ *  file: convtoami.html
+ *
+ *  Copyright (C) 2016 Lapis Semiconductor Co., Ltd.
+!-->
+
+<script type="text/javascript">
+    RED.nodes.registerType('conv_enocean',{
+        category: 'Lazurite_Gateway',
+        paletteLabel: 'Conv EnOcean',
+        color: '#C7E9C0',
+        defaults: {
+            name: {value:""},
+            key: {value:"",required:true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "function.png",
+        label: function() {
+            return this.name||"Conv EnOcean";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="conv_enocean">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-key"><i class="fa fa-user"></i> appKey</label>
+        <input type="text" id="node-input-key" placeholder="appKey">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="conv_enocean">
+    <p>Convert binary data to the format of Toami for DOCOMO.</p>
+    <p>Inputs a message with the properties:
+      <li>msg.payload</li>
+    </p>
+    <p><b>msg.payload</b> is only payload. header is abandoned.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('conv_lazurite',{
+        category: 'Lazurite_Gateway',
+        paletteLabel: 'Conv Lazurite',
+        color: '#C7E9C0',
+        defaults: {
+            name: {value:""},
+            key: {value:"",required:true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "function.png",
+        label: function() {
+            return this.name||"Conv Lazurite";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="conv_lazurite">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-key"><i class="fa fa-user"></i> appKey</label>
+        <input type="text" id="node-input-key" placeholder="appKey">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="conv_lazurite">
+    <p>Convert message to the format of Toami for DOCOMO.</p>
+    <p>Inputs a message with the properties:
+      <li>msg.payload</li>
+    </p>
+    <p><b>msg.payload</b> is only payload. header is abandoned.</p>
+</script>

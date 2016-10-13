@@ -1,0 +1,20 @@
+{
+  "name": "node-red-function-convtoami",
+  "version": "0.0.1",
+  "description": "Convert data to Toami format.",
+  "main": "convtoami.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LAPIS-Lazurite/node-red-function-convtoami.git"
+  },
+  "node-red": {
+    "nodes": {
+      "convtoami": "convtoami.js"
+    }
+  },
+  "author": "",
+  "license": "GPLv3"
+}
